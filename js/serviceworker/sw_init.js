@@ -1,0 +1,1 @@
+"serviceWorker"in navigator&&navigator.serviceWorker.register("/DragonBMS-Interface-Web/serviceworker.js");
