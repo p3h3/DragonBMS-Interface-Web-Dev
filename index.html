@@ -58,8 +58,8 @@
         <div class="dropdown">
             <span>Settings</span>
             <div class="dropdown-content">
-                <!--a id="tileBarBoardInfo">Board Info</a>
-                <br-->
+                <a id="tileBarBoardInfo">Board Info</a>
+                <br>
                 <a id="tileBarBoardConfig">Board Configuration</a>
                 <br>
                 <a id="tileBarBoardCalib">Board Calibration</a>
@@ -99,7 +99,7 @@
     <div id="tilebar-right">
 
         <div class="dropdown">
-            <span id="version-number" class="blue">3.8</span>
+            <span id="version-number" class="blue">3.90</span>
 
             <div class="dropdown-content">
                 <a class="bms-hz">BMS: </a>
@@ -896,13 +896,16 @@
     <div id="board-info-container" class="hidden">
         <img class="logo" src="img/icon/512x512.png" alt="voltaic logo">
         <h3>VoltaicBMS Interface</h3>
-        <br>
-        <p>Name:</p>
-        <p id="bms-device-name"></p>
-        <p>Hardware Version:</p>
-        <p id="bms-hardware-version"></p>
-        <p>Firmware Version:</p>
-        <p id="bms-firmware-version"></p>
+
+        <p>Name: <a class="bms-name-field"></a></p>
+
+        <p>Model: <a class="bms-model-field"></a></p>
+
+        <p>Hardware Version: <a class="bms-hardware-version-field"></a></p>
+
+        <p>Firmware Version: <a class="bms-firmware-version-field"></a></p>
+
+        <p>System Id: <a class="bms-system-id-field"></a></p>
     </div>
 
 
