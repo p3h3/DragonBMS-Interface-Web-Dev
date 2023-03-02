@@ -72,7 +72,6 @@
             </div>
         </div>
         <div class="dropdown">
-            <!-- remove hidden class if logging works -->
             <span id="logging-span">Logging</span>
             <div class="dropdown-content">
                 <div id="tileBarSelectDataLoggingFile">
@@ -84,26 +83,29 @@
                 <a id="tileBarStopDataLogging">Stop data logging</a>
             </div>
         </div>
-        <div id="tileBarAbout">
-            <span>About</span>
-        </div>
-        <div id="tileBarDarkmode">
-            <span>Style</span>
+        <div class="dropdown">
+            <span>Interface</span>
+            <div class="dropdown-content">
+                <a id="tileBarAbout">Settings</a>
+                <br>
+                <a id="tileBarDarkmode">Toggle Style</a>
+                <br>
+                <a id="tileBarEdit">Edit Tiles</a>
+            </div>
         </div>
 
     </div>
 
     <div id="tilebar-right">
-        <div>
-            <span class="bms-hz">BMS: </span>
-        </div>
 
-        <div>
-            <span class="tacho-hz">T: </span>
-        </div>
+        <div class="dropdown">
+            <span id="version-number" class="blue">3.6</span>
 
-        <div>
-            <span id="version-number" class="blue">3.5</span>
+            <div class="dropdown-content">
+                <a class="bms-hz">BMS: </a>
+                <br>
+                <a class="tacho-hz">Tacho: </a>
+            </div>
         </div>
     </div>
 
