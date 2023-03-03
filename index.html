@@ -100,7 +100,7 @@
     <div id="tilebar-right">
 
         <div class="dropdown">
-            <span class="version-number-field blue"></span>
+            <span class="version-number-field accent"></span>
 
             <div class="dropdown-content">
                 <a class="bms-hz">BMS: </a>
@@ -810,7 +810,14 @@
                         <td class="full">
                             <input id="interface-background-color" class="coloris background-color" type="text" data-coloris>
                         </td>
-
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="interface-accent-color">Accent Color</label>
+                        </td>
+                        <td class="full">
+                            <input id="interface-accent-color" class="coloris accent" type="text" data-coloris>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -1735,10 +1742,10 @@
 
 <script src="js/libraries/coloris.js"></script>
 
+<script src="js/helpers/small_functions.js"></script>
 
 <script src="js/serviceworker/sw_init.js"></script>
 
-<script src="js/helpers/small_functions.js"></script>
 <script src="js/dom_element_init.js"></script>
 <script src="js/helpers/color_mode.js"></script>
 <script src="js/helpers/configcalib_processing.js"></script>
