@@ -773,135 +773,6 @@
 
 
 
-    <div id="interface-info-container" class="hidden">
-        <img class="logo" src="img/icon/512x512.png" alt="voltaic logo">
-        <h2>VoltaicBMS Interface</h2>
-        <h3>Version:</h3>
-        <p class="version-number-field"></p>
-        <div class="decription-container">
-            <p>
-                VoltaicBMS Interface is a program for interfacing with the Voltaic VoltaicBMS System.
-
-                It both acts as a Monitor for live data, a data logger for later analysis and a configuration tool to
-                make the BMS fit your needs.
-            </p>
-
-            <p>
-                To really make the interface feel like your own, use the config:
-            </p>
-
-            <p>
-                (to make the color changes visible, go toggle "ColorMode" until you see the changes)
-            </p>
-
-            <div id="interface-configuration-table-container">
-                <table id="interface-configuration-table">
-                    <tr>
-                        <td>
-                            <label for="interface-foreground-color">Foreground Color</label>
-                        </td>
-
-                        <td class="full">
-                            <input id="interface-foreground-color" class="coloris foreground-color" type="text" data-coloris>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="interface-background-color">Background Color</label>
-                        </td>
-                        <td class="full">
-                            <input id="interface-background-color" class="coloris background-color" type="text" data-coloris>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="interface-accent-color">Accent Color</label>
-                        </td>
-                        <td class="full">
-                            <input id="interface-accent-color" class="coloris accent" type="text" data-coloris>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="interface-averaging-time-u">Averaging Time U[s]</label>
-                        </td>
-                        <td>
-                            <input id="interface-averaging-time-u" type="number" step="0.1">
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="interface-averaging-time-i">Averaging Time I[s]</label>
-                        </td>
-                        <td>
-                            <input id="interface-averaging-time-i" type="number" step="0.1">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="interface-averaging-time-t">Averaging Time T[s]</label>
-                        </td>
-                        <td>
-                            <input id="interface-averaging-time-t" type="number" step="0.1">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="interface-averaging-time-calib">Averaging Time Calib[s]</label>
-                        </td>
-                        <td>
-                            <input id="interface-averaging-time-calib" type="number" step="0.1">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="interface-max-value-hold-on-time">Max Value Hold on Time[s]</label>
-                        </td>
-                        <td>
-                            <input id="interface-max-value-hold-on-time" type="number" step="0.1">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="interface-filter-bms-connection">Filter BMS Connection</label>
-                        </td>
-                        <td>
-                            <input id="interface-filter-bms-connection" type="checkbox">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="interface-bms-auto-read-config-calib">Auto-Read BMS Config/Calib</label>
-                        </td>
-                        <td>
-                            <input id="interface-bms-auto-read-config-calib" type="checkbox">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="interface-dev-tile-active">Dev-Tile active</label>
-                        </td>
-                        <td>
-                            <input id="interface-dev-tile-active" type="checkbox">
-                        </td>
-                    </tr>
-                </table>
-
-            </div>
-
-            <p>
-                As this is a progressive web app, the newest version is basically just a swipe down away.
-                As we found this feature to be a bit distracting in everyday use, you can enable the swipe down updates <b><u id="enable-swipe-down-update">here</u></b>
-            </p>
-            <p>Note: <br> I would kindly ask you to be a bit gentle as it's still a pre-release version that needs more development and testing. If you have severe problems or want to make a usability friendly suggestion, feel free to contact me!</p>
-            <p>You can reach me via: hi@p3h3.de</p>
-        </div>
-    </div>
-
-
-
-
 
     <div id="board-info-container" class="hidden">
         <img class="logo" src="img/icon/512x512.png" alt="voltaic logo">
@@ -1366,7 +1237,15 @@
                     <td>
                         <button id="resetPulses">Set to 0</button>
                         <br>
-                        Pulses: <span id="pulses"></span>
+
+                        <div>
+                            Pulses: <span id="pulses"></span>
+                            <div class="dropdown-content">
+                                If this value is jumping between big positive and big negative numbers, (overflowing)
+                                <br>
+                                please restart both the device and interface before calculating the dist/pulse.
+                            </div>
+                        </div>
                     </td>
 
                     <td>
@@ -1668,6 +1547,143 @@
         </div>
 
     </div>
+
+
+
+
+    <div id="interface-info-container" class="hidden">
+        <img class="logo" src="img/icon/512x512.png" alt="voltaic logo">
+        <h2>VoltaicBMS Interface</h2>
+        <h3>Version:</h3>
+        <p class="version-number-field"></p>
+        <div class="decription-container">
+            <p>
+                VoltaicBMS Interface is a program for interfacing with the Voltaic VoltaicBMS System.
+
+                It both acts as a Monitor for live data, a data logger for later analysis and a configuration tool to
+                make the BMS fit your needs.
+            </p>
+
+            <p>
+                To really make the interface feel like your own, use the config:
+            </p>
+
+            <p>
+                (to make the color changes visible, go toggle "ColorMode" until you see the changes)
+            </p>
+
+            <div id="interface-configuration-table-container">
+                <table id="interface-configuration-table">
+                    <tr>
+                        <td>
+                            <label for="interface-foreground-color">Foreground Color</label>
+                        </td>
+
+                        <td class="full">
+                            <input id="interface-foreground-color" class="coloris foreground-color" type="text" data-coloris>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="interface-background-color">Background Color</label>
+                        </td>
+                        <td class="full">
+                            <input id="interface-background-color" class="coloris background-color" type="text" data-coloris>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="interface-accent-color">Accent Color</label>
+                        </td>
+                        <td class="full">
+                            <input id="interface-accent-color" class="coloris accent" type="text" data-coloris>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="interface-averaging-time-u">Averaging Time U[s]</label>
+                        </td>
+                        <td>
+                            <input id="interface-averaging-time-u" type="number" step="0.1">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="interface-averaging-time-i">Averaging Time I[s]</label>
+                        </td>
+                        <td>
+                            <input id="interface-averaging-time-i" type="number" step="0.1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="interface-averaging-time-t">Averaging Time T[s]</label>
+                        </td>
+                        <td>
+                            <input id="interface-averaging-time-t" type="number" step="0.1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="interface-averaging-time-calib">Averaging Time Calib[s]</label>
+                        </td>
+                        <td>
+                            <input id="interface-averaging-time-calib" type="number" step="0.1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="interface-max-value-hold-on-time">Max Value Hold on Time[s]</label>
+                        </td>
+                        <td>
+                            <input id="interface-max-value-hold-on-time" type="number" step="0.1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="interface-filter-bms-connection">Filter BMS Connection</label>
+                        </td>
+                        <td>
+                            <input id="interface-filter-bms-connection" type="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="interface-bms-auto-read-config-calib">Auto-Read BMS Config/Calib</label>
+                        </td>
+                        <td>
+                            <input id="interface-bms-auto-read-config-calib" type="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="interface-dev-tile-active">Dev-Tile active</label>
+                        </td>
+                        <td>
+                            <input id="interface-dev-tile-active" type="checkbox">
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <p>
+                As this is a progressive web app, the newest version is basically just a swipe down away.
+                As we found this feature to be a bit distracting in everyday use, you can enable the swipe down updates <b><u id="enable-swipe-down-update">here</u></b>
+            </p>
+            <p>Note: <br> I would kindly ask you to be a bit gentle as it's still a pre-release version that needs more development and testing. If you have severe problems or want to make a usability friendly suggestion, feel free to contact me!</p>
+            <p>You can reach me via: hi@p3h3.de</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
 
 
     <div id="keyboard-container" class="hidden">
