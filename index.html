@@ -1014,6 +1014,21 @@
                 <tr>
                     <td>
                         <div class="dropdown">
+                            <label for="logic-max-temp">Load Capacitance [10uF]:</label>
+                            <div class="dropdown-content">
+                                The load capacitance value is the input capacitance on your load's power connection. The
+                                value is used to estimate weather the right load or even any load is connected.
+                                If this setting is grossly wrong, it may lead to faults "nothing connected" faults.
+                            </div>
+                        </div>
+                    </td>
+                    <td><input id="load-capacitance" type="number" min="0" max="65534"></td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="dropdown">
                             <label for="logic-max-temp">Precharge Transistor max temperature [°C]:</label>
                             <div class="dropdown-content">
                                 The precharge transistor regulated the current needed to charge the output capacitance (motor controllers, etc.).
