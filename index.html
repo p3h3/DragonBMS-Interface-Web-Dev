@@ -987,7 +987,7 @@
                     <td><input id="strand-max-imbalance-current" type="number" min="1"></td>
                 </tr>
 
-                <tr>
+                <tr class="hidden">
                     <td>
                         <div class="dropdown">
                             <label for="spike-sensitivity-select">Current Spike sensitivity:</label>
@@ -1026,14 +1026,14 @@
                 <tr>
                     <td>
                         <div class="dropdown">
-                            <label for="logic-max-temp">Precharge Transistor max temperature [°C]:</label>
-                            <div class="dropdown-content">
+                            <label for="logic-max-temp">Extern max temperature [°C]:</label>
+                            <!--div class="dropdown-content">
                                 The precharge transistor regulated the current needed to charge the output capacitance (motor controllers, etc.).
                                 Per physics, this transistor dissipates the same energy that the capacitors are charged with, which
                                 means, that it gets warm. This max temperature may be set from experience to catch unusually high
                                 output capacities or to prolong the life of the transistor. You can't break anything with this setting
                                 as there is a self-protection mechanism.
-                            </div>
+                            </div-->
                         </div>
                     </td>
                     <td><input id="logic-max-temp" type="number" min="40" max="90"></td>
@@ -1095,7 +1095,8 @@
                         <div class="dropdown">
                             <label for="bms-config-auto-power-off">Auto power off time [minutes]:</label>
                             <div class="dropdown-content">
-                                Not yet implemented
+                                Idle time before BMS automatically turns off. Idle is defined as either not in operation mode or
+                                <0.5A current drawn from each battery. Resets every time idle state is left.
                             </div>
                         </div>
                     </td>
@@ -1674,8 +1675,9 @@
 
             <p>
                 As this is a progressive web app, the newest version is basically just a swipe down away.
-                As we found this feature to be a bit distracting in everyday use, you can enable the swipe down updates <b><u id="enable-swipe-down-update">here</u></b>
+                As we found this feature to be a bit distracting in everyday use, you can enable the temporary swipe down <b><u id="enable-swipe-down-update">here</u></b>.
             </p>
+            <p>Note: The swipe down updates are only temporary and will be forgotten once you restart the app. For permanent updates, confirm the update in the "new version" popup.</p>
             <p>Note: <br> I would kindly ask you to be a bit gentle as it's still a pre-release version that needs more development and testing. If you have severe problems or want to make a usability friendly suggestion, feel free to contact me!</p>
             <p>You can reach me via: hi@p3h3.de</p>
         </div>
