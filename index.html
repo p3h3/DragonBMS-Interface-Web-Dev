@@ -2026,7 +2026,10 @@
                     </div>
 
                     <table class="vehicle-model-table">
-                        <tr>
+                        <!--
+                            for gokart only!!!!
+                         -->
+                        <tr class="visibility-hidden">
                             <td>
                                 <input id="reverse-fl" type="checkbox">
                             </td>
@@ -2053,7 +2056,7 @@
 
                         <tr>
                             <td>
-                                <input id="reverse-rr" type="checkbox">
+                                <input id="reverse-rr" type="checkbox" class="visibility-hidden">
                             </td>
                             <td>
                                 <div class="vehicle-model-torque">
@@ -2065,7 +2068,7 @@
                             <!-- inverted order here because css spec is weird
                             - float right elements are in inverse order -->
                             <td>
-                                <input id="reverse-rl" type="checkbox">
+                                <input id="reverse-rl" type="checkbox" class="visibility-hidden">
                             </td>
                             <td>
                                 <div class="vehicle-model-torque">
