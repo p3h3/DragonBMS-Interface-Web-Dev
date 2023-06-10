@@ -93,13 +93,15 @@
         <div class="dropdown">
             <span id="tilebar-interface-dropdown">Interface</span>
             <div class="dropdown-content">
-                <a id="tileBarAbout">Settings</a>
+                <a id="tileBar-about">Settings</a>
                 <br>
-                <a id="tileBarDarkmode">Switch Style</a>
+                <a id="tileBar-colormode">Switch Style</a>
                 <br>
                 <a id="tilebar-edit">Edit Tiles</a>
                 <br>
                 <a id="tilebar-capture-mode">Film Video</a>
+                <br>
+                <a id="tilebar-interface-mode">Mode</a>
             </div>
         </div>
 
@@ -534,11 +536,6 @@
                         </tr>
                     </table>
 
-
-
-
-
-
                 </div>
             </td>
 
@@ -654,156 +651,36 @@
 
         <tr>
 
+            <!--
+
+            they need to absolutely empty!
+            for the rearrange logic to allow placing the dev field here
+
+            -->
+            <td class="main-table-td-2row">
+            </td>
 
 
-        <!--
+            <td class="main-table-td-2row">
+            </td>
 
-        they need to absolutely empty!
-        for the rearrange logic to allow placing the dev field here
-
-        -->
-
-        <td class="main-table-td-2row">
-
-            <div class="gauge-div vehicle-model">
-
-                <div class="vehicle-model-container">
-                    <!-- SVG injection makes the tag styleable since it's an inline SVG object-->
-                    <img src="./img/gokart_wireframe.svg" class="vehicle-model-image"/>
-
-                </div>
-
-                <table class="vehicle-model-table">
-                    <tr>
-                        <td>
-                            <input id="reverse-fl" type="checkbox">
-                        </td>
-                        <td>
-                            <div class="vehicle-model-torque">
-                                <div class="vehicle-model-torque-positive vehicle-model-torque-fl"></div>
-                                <div class="vehicle-model-torque-negative vehicle-model-torque-fl"></div>
-                            </div>
-                        </td>
+        </tr>
 
 
-                        <!-- inverted order here because css spec is weird
-                        - float right elements are in inverse order -->
-                        <td>
-                            <input id="reverse-fr" type="checkbox">
-                        </td>
-                        <td>
-                            <div class="vehicle-model-torque">
-                                <div class="vehicle-model-torque-positive vehicle-model-torque-fr"></div>
-                                <div class="vehicle-model-torque-negative vehicle-model-torque-fr"></div>
-                            </div>
-                        </td>
-                    </tr>
 
-                    <tr>
-                        <td>
-                            <input id="reverse-rr" type="checkbox">
-                        </td>
-                        <td>
-                            <div class="vehicle-model-torque">
-                                <div class="vehicle-model-torque-positive vehicle-model-torque-rr"></div>
-                                <div class="vehicle-model-torque-negative vehicle-model-torque-rr"></div>
-                            </div>
-                        </td>
+        <tr class="dev-mode-tiles display-none">
 
-                        <!-- inverted order here because css spec is weird
-                        - float right elements are in inverse order -->
-                        <td>
-                            <input id="reverse-rl" type="checkbox">
-                        </td>
-                        <td>
-                            <div class="vehicle-model-torque">
-                                <div class="vehicle-model-torque-positive vehicle-model-torque-rl"></div>
-                                <div class="vehicle-model-torque-negative vehicle-model-torque-rl"></div>
-                            </div>
-                        </td>
-                    </tr>
+            <!--
 
-                </table>
+            they need to absolutely empty!
+            for the rearrange logic to allow placing the dev field here
+
+            -->
+            <td class="main-table-td-2row">
+            </td>
 
 
-            </div>
-
-
-        </td>
-
-
-            <td class="main-table-td-2row can-bridge-element" id="can-tx-gauge">
-                <div class="gauge-div">
-
-                    <table class="table-4fields">
-                        <tr>
-                            <td class="can-input-td"><label for="can-tx-extended-id-checkbox" class="can-input" >Extended ID:</label></td>
-                            <td class="can-input-td"><input type="checkbox" class="can-input" id="can-tx-extended-id-checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td class="can-input-td"><label for="can-tx-id" class="can-input" >ID (dec):</label></td>
-                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-id" value="0"></td>
-                        </tr>
-                        <tr>
-                            <td class="can-input-td"><label for="can-tx-data0" class="can-input" >D0:</label></td>
-                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data0" value="-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="can-input-td"><label for="can-tx-data1" class="can-input" >D1:</label></td>
-                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data1" value="-1"></td>
-                        </tr>
-                        <!--
-                        <tr>
-                            <td class="can-input-td"><label for="can-tx-data2" class="can-input" >D2:</label></td>
-                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data2" value="-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="can-input-td"><label for="can-tx-data3" class="can-input" >D3:</label></td>
-                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data3" value="-1"></td>
-                        </tr>
-
-                        <tr>
-                            <td class="can-input-td"><label for="can-tx-data4" class="can-input" >D4:</label></td>
-                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data4" value="-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="can-input-td"><label for="can-tx-data5" class="can-input" >D5:</label></td>
-                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data5" value="-1"></td>
-                        </tr>
-
-                        <tr>
-                            <td class="can-input-td"><label for="can-tx-data6" class="can-input" >D6:</label></td>
-                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data6" value="-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="can-input-td"><label for="can-tx-data7" class="can-input" >D7:</label></td>
-                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data7" value="-1"></td>
-                        </tr>
-                        -->
-                        <tr>
-                            <td class="can-input-td"><label for="can-tx-send-button" class="can-input" >Send!</label></td>
-                            <td class="can-input-td"><input type="button" class="can-input" id="can-tx-send-button"></td>
-                        </tr>
-
-                        <tr>
-                            <td class="can-input-td"><label for="can-rx-extended-id-checkbox" class="can-input" >Extended ID:</label></td>
-                            <td class="can-input-td"><input type="checkbox" class="can-input" id="can-rx-extended-id-checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td class="can-input-td"><label for="can-rx-id" class="can-input" >ID (dec):</label></td>
-                            <td class="can-input-td"><input type="number" class="can-input" id="can-rx-id" value="0"></td>
-                        </tr>
-                        <tr>
-                            <td class="can-input-td"><label for="can-rx-send-button" class="can-input" >Send!</label></td>
-                            <td class="can-input-td"><input type="button" class="can-input" id="can-rx-send-button"></td>
-                        </tr>
-                    </table>
-
-
-                    <p id="can-rx-pfusch-box">
-
-                </div>
-
+            <td class="main-table-td-2row">
             </td>
 
         </tr>
@@ -2137,6 +2014,148 @@
         <a id="aDownloadFile" download></a>
 
 
+        <table>
+
+            <td class="main-table-td-2row" id="vehicle-model">
+                <div class="gauge-div">
+
+                    <div class="vehicle-model-container">
+                        <!-- SVG injection makes the tag styleable since it's an inline SVG object-->
+                        <img src="./img/gokart_wireframe.svg" class="vehicle-model-image"/>
+
+                    </div>
+
+                    <table class="vehicle-model-table">
+                        <tr>
+                            <td>
+                                <input id="reverse-fl" type="checkbox">
+                            </td>
+                            <td>
+                                <div class="vehicle-model-torque">
+                                    <div class="vehicle-model-torque-positive vehicle-model-torque-fl"></div>
+                                    <div class="vehicle-model-torque-negative vehicle-model-torque-fl"></div>
+                                </div>
+                            </td>
+
+
+                            <!-- inverted order here because css spec is weird
+                            - float right elements are in inverse order -->
+                            <td>
+                                <input id="reverse-fr" type="checkbox">
+                            </td>
+                            <td>
+                                <div class="vehicle-model-torque">
+                                    <div class="vehicle-model-torque-positive vehicle-model-torque-fr"></div>
+                                    <div class="vehicle-model-torque-negative vehicle-model-torque-fr"></div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input id="reverse-rr" type="checkbox">
+                            </td>
+                            <td>
+                                <div class="vehicle-model-torque">
+                                    <div class="vehicle-model-torque-positive vehicle-model-torque-rr"></div>
+                                    <div class="vehicle-model-torque-negative vehicle-model-torque-rr"></div>
+                                </div>
+                            </td>
+
+                            <!-- inverted order here because css spec is weird
+                            - float right elements are in inverse order -->
+                            <td>
+                                <input id="reverse-rl" type="checkbox">
+                            </td>
+                            <td>
+                                <div class="vehicle-model-torque">
+                                    <div class="vehicle-model-torque-positive vehicle-model-torque-rl"></div>
+                                    <div class="vehicle-model-torque-negative vehicle-model-torque-rl"></div>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </table>
+
+
+                </div>
+            </td>
+
+
+            <td class="main-table-td-2row" id="can-gauge">
+                <div class="gauge-div can-bridge-element">
+
+                    <table class="table-4fields">
+                        <tr>
+                            <td class="can-input-td"><label for="can-tx-extended-id-checkbox" class="can-input" >Extended ID:</label></td>
+                            <td class="can-input-td"><input type="checkbox" class="can-input" id="can-tx-extended-id-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="can-input-td"><label for="can-tx-id" class="can-input" >ID (dec):</label></td>
+                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-id" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td class="can-input-td"><label for="can-tx-data0" class="can-input" >D0:</label></td>
+                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data0" value="-1"></td>
+                        </tr>
+                        <tr>
+                            <td class="can-input-td"><label for="can-tx-data1" class="can-input" >D1:</label></td>
+                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data1" value="-1"></td>
+                        </tr>
+                        <!--
+                        <tr>
+                            <td class="can-input-td"><label for="can-tx-data2" class="can-input" >D2:</label></td>
+                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data2" value="-1"></td>
+                        </tr>
+                        <tr>
+                            <td class="can-input-td"><label for="can-tx-data3" class="can-input" >D3:</label></td>
+                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data3" value="-1"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="can-input-td"><label for="can-tx-data4" class="can-input" >D4:</label></td>
+                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data4" value="-1"></td>
+                        </tr>
+                        <tr>
+                            <td class="can-input-td"><label for="can-tx-data5" class="can-input" >D5:</label></td>
+                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data5" value="-1"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="can-input-td"><label for="can-tx-data6" class="can-input" >D6:</label></td>
+                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data6" value="-1"></td>
+                        </tr>
+                        <tr>
+                            <td class="can-input-td"><label for="can-tx-data7" class="can-input" >D7:</label></td>
+                            <td class="can-input-td"><input type="number" class="can-input" id="can-tx-data7" value="-1"></td>
+                        </tr>
+                        -->
+                        <tr>
+                            <td class="can-input-td"><label for="can-tx-send-button" class="can-input" >Send!</label></td>
+                            <td class="can-input-td"><input type="button" class="can-input" id="can-tx-send-button"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="can-input-td"><label for="can-rx-extended-id-checkbox" class="can-input" >Extended ID:</label></td>
+                            <td class="can-input-td"><input type="checkbox" class="can-input" id="can-rx-extended-id-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td class="can-input-td"><label for="can-rx-id" class="can-input" >ID (dec):</label></td>
+                            <td class="can-input-td"><input type="number" class="can-input" id="can-rx-id" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td class="can-input-td"><label for="can-rx-send-button" class="can-input" >Send!</label></td>
+                            <td class="can-input-td"><input type="button" class="can-input" id="can-rx-send-button"></td>
+                        </tr>
+                    </table>
+
+
+                    <p id="can-rx-pfusch-box">
+
+                </div>
+            </td>
+
+        </table>
 
 
 
