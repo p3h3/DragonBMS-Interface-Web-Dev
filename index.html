@@ -27,6 +27,8 @@
 
     <link rel="stylesheet" href="css/vehicle-model.css">
 
+    <link rel="stylesheet" href="css/data-distribution.css">
+
     <link rel="icon" type="image/x-icon" href="img/icon/512x512.png">
 
 
@@ -72,6 +74,8 @@
                 <a id="tileBarBoardCalib">BMS Calibration</a>
                 <br>
                 <a id="tileBarTachoConfig">Tacho Configuration</a>
+                <br>
+                <a id="tileBarDataDistribution" class="display-none">Data Distribution</a>
                 <a id="settings-hide" class="display-none">
                     <br>
                     Close this Window
@@ -138,6 +142,10 @@
         </div>
     </div>
 </div>
+
+
+
+
 
 <div id="zoom-content">
 
@@ -1637,6 +1645,37 @@
         </div>
     </div>
 
+
+
+
+
+    <div id="data-distribution" class="display-none">
+        <div id="data-distribution-container">
+            <table id="data-distribution-mapping-table">
+                <tr>
+                    <th>
+                        <p>Output</p>
+                    </th>
+                    <th>
+                        <p>Input</p>
+                    </th>
+                </tr>
+            </table>
+
+            <table id="data-distribution-inputs-table">
+                <tr>
+                    <th>
+                        <p>Available Data</p>
+                    </th>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="hide-setting-button">
+            Close this Window
+        </div>
+    </div>
 
 
 
