@@ -47,7 +47,7 @@
 
 
 
-    <!-- COOL, this is a progressive web app now -->
+    <!-- COOL, this is a progressive web application now -->
     <link rel="manifest" href="app.webmanifest" />
 </head>
 <body class="disableSwipeDown">
@@ -897,7 +897,8 @@
                             <label>Enabled Inputs:ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</label>
 
                             <div class="dropdown-content">
-                                Which Inputs should are enabled - only these Inputs have the protection features and will turn on
+                                Which Inputs are enabled -
+                                only these Inputs have the protection features and will turn on
                             </div>
                         </div>
                     </td>
@@ -1047,7 +1048,7 @@
                             <label for="strand-max-imbalance-current">Current imbalance [A]:</label>
                             <div class="dropdown-content">
                                 The difference in current that can flow between the batteries which will trigger a protection event.
-                                With identical battery packs this current may be caused by different wire lengths or different stages of degradation inside the battery.
+                                With identical battery packs, this current may be caused by different wire lengths or different stages of degradation inside the battery.
                                 The difference of course applies to both charging and discharging and "idling"
                             </div>
                         </div>
@@ -1060,9 +1061,9 @@
                         <div class="dropdown">
                             <label for="spike-sensitivity-select">Current Spike sensitivity:</label>
                             <div class="dropdown-content">
-                                The current spike sensitivity changes the instant over current (short) protection value. If this is set too high, a short may be detected too late or not at all.
+                                The current spike sensitivity changes the instant over current (short) protection value. If this is set too highly, a short may be detected too late or not at all.
                                 If you encounter short Faults under high loads at low speeds, your drivetrain may have a current spike problem, which means that the motor controller is seeking
-                                really high currents for short durations and is thereby potentially harming the battery. You can just turn down the sensitivity to avoid the faults, we would
+                                really high currents for short durations and is thereby potentially harming the battery. You can just turn down the sensitivity to avoid the faults; we would
                                 however advise you to look at other options of avoiding spikes (additional filter capacitors near the motor controller).
                             </div>
                         </div>
@@ -1095,10 +1096,10 @@
                     <td>
                         <div class="dropdown">
                             <label for="logic-max-temp">Extern max temp [°C]:</label>
-                            <!--div class="dropdown-content">
+                            <!--Div class="dropdown-content">
                                 The precharge transistor regulated the current needed to charge the output capacitance (motor controllers, etc.).
                                 Per physics, this transistor dissipates the same energy that the capacitors are charged with, which
-                                means, that it gets warm. This max temperature may be set from experience to catch unusually high
+                                means that it gets warm. This max temperature may be set from experience to catch unusually high
                                 output capacities or to prolong the life of the transistor. You can't break anything with this setting
                                 as there is a self-protection mechanism.
                             </div-->
@@ -1176,8 +1177,8 @@
                         <div class="dropdown">
                             <label>Update Count:</label>
                             <div class="dropdown-content">
-                                The number of times, the configuration has been updated. This mostly serves as a confirmation, that
-                                all of your changes have been correctly sent and read back - if you save the changes, this number
+                                The number of times, the configuration has been updated. This mostly serves as a confirmation that
+                                all of your changes have been correctly sent and read back— if you save the changes, this number
                                 should increase by 1.
                             </div>
                         </div>
@@ -1339,7 +1340,8 @@
                         <div>
                             Pulses: <span id="pulses"></span>
                             <div class="dropdown-content">
-                                Everytime your Hall sensor detect a Pulse, depending on rotation Direction it gets added or subtracted.
+                                Everytime your Hall sensors detect a pulse, depending on the direction of rotation,
+                                it gets added or subtracted.
                             </div>
                         </div>
                     </td>
@@ -1688,7 +1690,7 @@
 
         <div class="description-container">
             <p>
-                This App is for use with the VoltaicBMS and VoltaicTacho.
+                This Application is for use with the VoltaicBMS and VoltaicTacho.
             </p>
 
             <p>
@@ -1885,7 +1887,8 @@
             </div>
 
             <p>
-                As this is a progressive web app, you just need to restart while connected to the Internet for an Update.
+                As this is a progressive web application,
+                you just need to restart while connected to the Internet for an Update.
                 <br>
                 <br>
                 Please always restart again after every Update!
@@ -1893,12 +1896,13 @@
 
             <p>
                 Note: If you have any problems or want to make a suggestion, feel free to contact us!
-                You can reach us via: info@voltaic.de or WhatsApp / Phone : +49 170 5731608
+                You can reach us via: info@voltaic.de or WhatsApp / Phone: +49 170 5731608
             </p>
 
             <p>
                 If you want to contact the Lead Developer of this PWA or if you are interested in
-                development or discussing technical topics send me an E-Mail! : hi@p3h3.de
+                development or discussing technical topics e-mail me!
+                hi@p3h3.de
             </p>
 
 
