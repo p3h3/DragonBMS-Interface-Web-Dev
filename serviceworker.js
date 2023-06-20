@@ -1,6 +1,6 @@
 const serviceWorkerDebug = false;
 
-const cacheName = "voltaicbms-interface-web-v6.3bj";
+const cacheName = "voltaicbms-interface-web-v6.3bk";
 
 
 const appShellFiles = [
