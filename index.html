@@ -62,6 +62,8 @@
                 <p id="tileBarConnectTacho">Connect Tacho</p>
                 <br>
                 <p id="tileBarDisconnect">Disconnect All Devices</p>
+                <br>
+                <p id="tileBarDBC">DBC</p>
             </div>
         </div>
         <div class="dropdown">
@@ -2273,6 +2275,31 @@
 
 </div>
 
+
+<!-- sandbox for can-plugin loading -->
+
+<iframe sandbox="allow-scripts" id="can-plugin-sandbox">
+<html lang="hu">
+<head>
+    <script>
+        window.addEventListener('message', (e)=> {
+            let mainWindow = e.source;
+
+            console.log(e);
+
+            let result;
+            try {
+                result = eval(e.data);
+            } catch (e) {
+                result = 'eval() threw an exception.';
+            }
+            mainWindow.postMessage(result, e.origin);
+        });
+    </script>
+    <title>sandbox</title>
+</head>
+</html>
+</iframe>
 
 <script src="dist/main.js"></script>
 
