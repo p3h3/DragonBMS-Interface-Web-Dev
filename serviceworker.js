@@ -72,7 +72,7 @@ self.addEventListener("fetch", (e) => {
 
 
 
-// event is fired with activation of the serviceworker
+// the event is fired with activation of the serviceworker
 self.addEventListener("activate", async () => {
     // claim control over all the existing clients (windows that are open during the update)
     await self.clients.claim();
