@@ -701,6 +701,23 @@
 
         </tr>
 
+        <tr class="dev-mode-tiles display-none">
+
+            <!--
+
+            they need to absolutely empty!
+            for the rearrange logic to allow placing the dev field here
+
+            -->
+            <td class="main-table-td-2row">
+            </td>
+
+
+            <td class="main-table-td-2row">
+            </td>
+
+        </tr>
+
     </table>
 
 
@@ -855,7 +872,7 @@
             </select>
         </div>
         <br>
-        <a id="otaUpdateInfoText"><br></a>
+        <a id="otaUpdateInfoText" class="display-none"><br></a>
         <br>
         <div>
             <button id="ota-update-button" type="submit" class="btn btn-info" disabled>Update Firmware</button>
@@ -2259,6 +2276,77 @@
 
 
                     <p id="can-rx-pfusch-box">
+
+                </div>
+            </td>
+
+
+            <td class="main-table-td-2row" id="tacho-temp-settings-gauge">
+                <div class="gauge-div">
+
+                    <table class="table-4fields">
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-motor-temp-c" class="can-input" >Motor Cutoff:</label></td>
+                            <td class="tacho-temp-td"><input type="number" class="can-input" id="tacho-motor-temp-c"></td>
+                        </tr>
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-motor-temp-l1" class="can-input" >Motor Limp 1:</label></td>
+                            <td class="tacho-temp-td"><input type="number" class="can-input" id="tacho-motor-temp-l1" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-motor-temp-l2" class="can-input" >Motor Limp 2:</label></td>
+                            <td class="tacho-temp-td"><input type="number" class="can-input" id="tacho-motor-temp-l2" value="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-controller-temp-c" class="can-input" >controller Cutoff:</label></td>
+                            <td class="tacho-temp-td"><input type="number" class="can-input" id="tacho-controller-temp-c"></td>
+                        </tr>
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-controller-temp-l1" class="can-input" >controller Limp 1:</label></td>
+                            <td class="tacho-temp-td"><input type="number" class="can-input" id="tacho-controller-temp-l1" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-controller-temp-l2" class="can-input" >controller Limp 2:</label></td>
+                            <td class="tacho-temp-td"><input type="number" class="can-input" id="tacho-controller-temp-l2" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-extern-temp-c" class="can-input" >extern Cutoff:</label></td>
+                            <td class="tacho-temp-td"><input type="number" class="can-input" id="tacho-extern-temp-c"></td>
+                        </tr>
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-extern-temp-l1" class="can-input" >extern Limp 1:</label></td>
+                            <td class="tacho-temp-td"><input type="number" class="can-input" id="tacho-extern-temp-l1" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-extern-temp-l2" class="can-input" >extern Limp 2:</label></td>
+                            <td class="tacho-temp-td"><input type="number" class="can-input" id="tacho-extern-temp-l2" value="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-exp1" class="can-input" >experimental 1:</label></td>
+                            <td class="tacho-temp-td"><input type="number" class="can-input" id="tacho-exp1" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-exp2" class="can-input" >experimental 2:</label></td>
+                            <td class="tacho-temp-td"><input type="number" class="can-input" id="tacho-exp2" value="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-ext-temp-protection" class="can-input" >blackline, ext protection:</label></td>
+                            <td class="tacho-temp-td">
+                                <input type="checkbox" class="can-input" id="tacho-ext-temp-protection" value="0">
+                                <input type="checkbox" class="can-input" id="tacho-temp-protection" value="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tacho-temp-td"><label for="tacho-exp1-checkbox" class="can-input" >exp checkbox 1,2:</label></td>
+                            <td class="tacho-temp-td">
+                                <input type="checkbox" class="can-input" id="tacho-exp1-checkbox" value="0">
+                                <input type="checkbox" class="can-input" id="tacho-exp2-checkbox" value="0">
+                            </td>
+                        </tr>
+                    </table>
 
                 </div>
             </td>
