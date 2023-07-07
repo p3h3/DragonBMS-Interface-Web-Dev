@@ -16,6 +16,8 @@ const appShellFiles = [
     "css/settings.css",
     "css/colors.css",
     "css/tables.css",
+    "css/data-distribution.css",
+    "css/dbc-file-manager.css",
     "css/libraries/coloris.css",
     "css/libraries/simplekeyboard.css",
     "dist/main.js",
