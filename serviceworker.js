@@ -1,6 +1,6 @@
 const serviceWorkerDebug = false;
 
-const cacheName = "voltaicbms-interface-web-v6.6b";
+const cacheName = "voltaicbms-interface-web-v6.6c";
 
 
 const appShellFiles = [
@@ -17,7 +17,7 @@ const appShellFiles = [
     "css/colors.css",
     "css/tables.css",
     "css/data-distribution.css",
-    "css/dbc-file-manager.css",
+    "css/file-managers.css",
     "css/libraries/coloris.css",
     "css/libraries/simplekeyboard.css",
     "dist/main.js",
